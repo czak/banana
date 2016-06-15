@@ -9,18 +9,18 @@ import pl.czak.banana.annotation.BindView;
 
 public class Banana {
     public static void bind(Activity activity) {
-        if (activity == null) return;
-        Class<?> cls = activity.getClass();
-        for (Field f : cls.getDeclaredFields()) {
-            BindView bv = f.getAnnotation(BindView.class);
-            if (bv != null) {
-                View v = activity.findViewById(bv.value());
-                try {
-                    f.set(activity, v);
-                } catch (IllegalAccessException e) {
-                    e.printStackTrace();
-                }
-            }
+        ViewBinder<Activity> vb;
+
+        try {
+            // TODO: construct the class name dynamically based on activity.getClass()
+            Class<?> cls = Class.forName("pl.czak.bananasample.MainActivityViewBinder");
+            //noinspection unchecked
+            vb = (ViewBinder<Activity>) cls.newInstance();
+        } catch (Exception e) {
+            throw new RuntimeException("Unable to find view binder for "
+                    + activity.getClass().getName());
         }
+
+        vb.bind(activity);
     }
 }
