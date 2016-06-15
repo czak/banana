@@ -1,4 +1,5 @@
 include ':banana'
 include ':banana-sample'
+include ':banana-processor'
 
 rootProject.name = 'banana-parent'
