@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import pl.czak.banana.Banana;
+import pl.czak.banana.BindView;
 
 public class MainActivity extends Activity
 {
