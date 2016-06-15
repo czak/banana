@@ -5,6 +5,8 @@ import android.view.View;
 
 import java.lang.reflect.Field;
 
+import pl.czak.banana.annotation.BindView;
+
 public class Banana {
     public static void bind(Activity activity) {
         if (activity == null) return;

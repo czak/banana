@@ -11,8 +11,8 @@ android {
 }
 
 dependencies {
-    compile project(':banana')
-    apt project(':banana-processor')
+    compile project(':annotation')
+    apt project(':processor')
 }
 
 apt {

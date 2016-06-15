@@ -1,4 +1,4 @@
-package pl.czak.banana;
+package pl.czak.banana.annotation;
 
 import java.lang.annotation.Target;
 

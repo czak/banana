@@ -11,7 +11,7 @@ import javax.lang.model.element.Element;
 import javax.lang.model.element.TypeElement;
 import javax.tools.Diagnostic;
 
-import pl.czak.banana.BindView;
+import pl.czak.banana.annotation.BindView;
 
 public class BananaProcessor extends AbstractProcessor {
     @Override

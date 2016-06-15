@@ -1,5 +1,5 @@
 apply plugin: 'java'
 
 dependencies {
-    compile project(':banana')
+    compile project(':annotation')
 }
