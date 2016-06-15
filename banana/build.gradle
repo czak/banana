@@ -1,6 +1,13 @@
-apply plugin: 'com.android.library'
+apply plugin: 'java'
 
-android {
-    compileSdkVersion 23
-    buildToolsVersion '23.0.3'
+sourceCompatibility = JavaVersion.VERSION_1_7
+targetCompatibility = JavaVersion.VERSION_1_7
+
+configurations {
+    provided
+    compile.extendsFrom provided
+}
+
+dependencies {
+    provided "com.google.android:android:2.1.2"
 }
