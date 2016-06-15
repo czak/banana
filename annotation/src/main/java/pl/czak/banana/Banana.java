@@ -12,8 +12,8 @@ public class Banana {
         ViewBinder<Activity> vb;
 
         try {
-            // TODO: construct the class name dynamically based on activity.getClass()
-            Class<?> cls = Class.forName("pl.czak.bananasample.MainActivityViewBinder");
+            String className = activity.getClass().getName() + "ViewBinder";
+            Class<?> cls = Class.forName(className);
             //noinspection unchecked
             vb = (ViewBinder<Activity>) cls.newInstance();
         } catch (Exception e) {
