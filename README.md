@@ -29,3 +29,8 @@ The project is split into 3 modules:
   * defines the `Banana.bind` method which invokes the binding
 * `processor` is the annotation processor
 * `sample` is a simple Android app demonstrating the use
+
+## Why "banana"
+
+* A butterknife is infinitely less sharp than a dagger
+* A banana is infinitely less sharp than a butterknife
