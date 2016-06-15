@@ -1,0 +1,4 @@
+include ':banana'
+include ':banana-sample'
+
+rootProject.name = 'banana-parent'
